@@ -7,8 +7,9 @@ import static org.junit.Assert.*;
 public class CohortTest {
     Cohort marco;
     Cohort bash;
+
     @Before
-    public void setup(){
+    public void setup() {
         marco = new Cohort();
         bash = null;
         Student jake = new Student(1L, "Jake");
@@ -24,24 +25,23 @@ public class CohortTest {
     }
 
     @Test
-    public void testCreationOfCohort(){
+    public void testCreationOfCohort() {
         assertNotNull(marco);
         assertNull(bash);
     }
 
     @Test
-    public void testAddStudents(){
+    public void testAddStudents() {
         assertEquals(1, marco.getStudents().size());
     }
 
     @Test
-    public void testGetStudents(){
+    public void testGetStudents() {
         assertEquals(2, marco.getStudents().size());
     }
 
     @Test
-    public void testGetCohortAverage(){
+    public void testGetCohortAverage() {
         assertEquals(90, marco.getCohortAverage(), 1);
     }
-
 }
